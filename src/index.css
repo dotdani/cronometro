@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  background-color: rgb(19, 19, 19);
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-variation-settings: "wdth" 100;
+  color: rgb(219, 219, 219);
+}
+
+body > div,
+.stopwatch,
+.stopwatch .time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.stopwatch {
+  gap: 2rem;
+  padding: 2rem;
+  height: 100vh;
+}
+
+.stopwatch .time {
+  width: 100%;
+  max-width: 18rem;
+  aspect-ratio: 1 / 1; 
+  border: 0.5rem solid rgb(69, 71, 70);
+  border-radius: 50%;
+  text-align: right;
+}
+
+.stopwatch .time div div:first-of-type {
+  font-size: clamp(1.5rem, 10vw, 3rem);
+}
+
+.stopwatch .time div div:last-of-type {
+  font-size: clamp(1rem, 10vw, 2rem);
+}
+
+.stopwatch .records {
+  padding: 0 0.5rem;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+}
+
+.stopwatch .records ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stopwatch .records li {
+  display: flex;
+  gap: 1rem;
+}
+
+.stopwatch .controls,
+.stopwatch .controls button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stopwatch .controls {
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.stopwatch .controls button {
+  border: 0;
+  transition: max-width ease-out 100ms;
+}
+
+.stopwatch .controls button:disabled {
+  display: none;
+}
+
+.stopwatch .controls button.round {
+  border-radius: 50%;
+}
+
+.stopwatch .controls button:not(.round) {
+  border-radius: 15%;
+}
+
+.stopwatch .controls button.small {
+  width: 100%;
+  max-width: 3.5rem;
+  aspect-ratio: 1 / 1;
+  background-color: rgb(15, 83, 36);
+  font-size: 1.5rem;
+  color: rgb(193, 243, 206);
+}
+
+.stopwatch .controls button.small:active {
+  background-color: rgba(15, 83, 36, 0.9);
+}
+
+.stopwatch .controls button.large {
+  width: 100%;
+  height: 5rem;
+  background-color: rgb(168, 200, 251);
+  font-size: 2rem;
+  color: rgb(11, 50, 115);
+}
+
+.stopwatch .controls button.large:active {
+  background-color: rgba(168, 200, 251, 0.9);
+}
+
+.stopwatch .controls button.large.round {
+  max-width: 5rem;
+}
+
+.stopwatch .controls button.large:not(.round) {
+  min-width: 5rem;
+  max-width: 7rem;
+}
