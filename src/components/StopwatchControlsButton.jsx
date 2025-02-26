@@ -9,7 +9,7 @@ function Button({ icon, size, shape, title, onClick, disabled }) {
       disabled={disabled ? "disabled" : ""}
       onClick={onClick}
     >
-      <FontAwesomeIcon icon={`fa-solid fa-${icon}`} />
+      <FontAwesomeIcon icon={["fas", icon]} />
     </button>
   );
 }
