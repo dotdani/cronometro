@@ -18,7 +18,7 @@ body {
   color: rgb(219, 219, 219);
 }
 
-body > div,
+#root,
 .stopwatch,
 .stopwatch .time {
   display: flex;
